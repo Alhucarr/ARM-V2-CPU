@@ -1,0 +1,108 @@
+$date
+  Sat Oct 23 17:11:36 2021
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module adder_32_tb $end
+$var reg 32 ! a[31:0] $end
+$var reg 32 " b[31:0] $end
+$var reg 32 # s[31:0] $end
+$var reg 1 $ cin $end
+$var reg 1 % cout $end
+$scope module adder_32 $end
+$var reg 32 & a[31:0] $end
+$var reg 32 ' b[31:0] $end
+$var reg 1 ( cin $end
+$var reg 32 ) s[31:0] $end
+$var reg 1 * cout $end
+$var reg 33 + c[32:0] $end
+$scope module boucle(0) $end
+$upscope $end
+$scope module boucle(1) $end
+$upscope $end
+$scope module boucle(2) $end
+$upscope $end
+$scope module boucle(3) $end
+$upscope $end
+$scope module boucle(4) $end
+$upscope $end
+$scope module boucle(5) $end
+$upscope $end
+$scope module boucle(6) $end
+$upscope $end
+$scope module boucle(7) $end
+$upscope $end
+$scope module boucle(8) $end
+$upscope $end
+$scope module boucle(9) $end
+$upscope $end
+$scope module boucle(10) $end
+$upscope $end
+$scope module boucle(11) $end
+$upscope $end
+$scope module boucle(12) $end
+$upscope $end
+$scope module boucle(13) $end
+$upscope $end
+$scope module boucle(14) $end
+$upscope $end
+$scope module boucle(15) $end
+$upscope $end
+$scope module boucle(16) $end
+$upscope $end
+$scope module boucle(17) $end
+$upscope $end
+$scope module boucle(18) $end
+$upscope $end
+$scope module boucle(19) $end
+$upscope $end
+$scope module boucle(20) $end
+$upscope $end
+$scope module boucle(21) $end
+$upscope $end
+$scope module boucle(22) $end
+$upscope $end
+$scope module boucle(23) $end
+$upscope $end
+$scope module boucle(24) $end
+$upscope $end
+$scope module boucle(25) $end
+$upscope $end
+$scope module boucle(26) $end
+$upscope $end
+$scope module boucle(27) $end
+$upscope $end
+$scope module boucle(28) $end
+$upscope $end
+$scope module boucle(29) $end
+$upscope $end
+$scope module boucle(30) $end
+$upscope $end
+$scope module boucle(31) $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b00000000000000000000000000000000 !
+b11111111111111111111111111111111 "
+b00000000000000000000000000000000 #
+1$
+1%
+b00000000000000000000000000000000 &
+b11111111111111111111111111111111 '
+1(
+b00000000000000000000000000000000 )
+1*
+b111111111111111111111111111111111 +
+#20000000

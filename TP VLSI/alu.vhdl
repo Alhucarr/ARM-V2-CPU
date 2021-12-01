@@ -29,7 +29,7 @@ b <= op2;
 Cin_s <= Cin;
 res<=s;
 cout <= cout_s;
-s <= a and b when cmd = "00" else s_a when cmd = "01" else a or b when cmd = "10" else a xor b when cmd = "11" else x"00000000";
+s <= a and b when cmd = "01" else s_a when cmd = "00" else a or b when cmd = "10" else a xor b when cmd = "11" else x"00000000";
 z <= '1' when s = x"00000000" else '0';
 v <= '1' when cout_s = '1' else '0';
 n <= '1' when s(31)='1' else '0';

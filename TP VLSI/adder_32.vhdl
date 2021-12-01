@@ -22,4 +22,3 @@ cout <= c(32);
 		s(i) <= (not(a(i)) and (b(i) xor c(i))) or a(i);
 	end generate Boucle;
 end archi_adder_32;
-

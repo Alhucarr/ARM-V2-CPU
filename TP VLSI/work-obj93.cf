@@ -1,28 +1,40 @@
 v 4
-file . "shifter.vhdl" "77befadb5f64887ba55b9501b423c8673a783d4d" "20211020094401.355":
-  entity shifter at 1( 0) + 0 on 761;
-  architecture archi_shifter of shifter at 24( 824) + 0 on 762;
-file . "alu.vhdl" "b51a7ba109f6bb3187512213cc89e9dc5945e41b" "20211020065114.554":
-  entity alu at 1( 0) + 0 on 615;
-  architecture archi_alu of alu at 20( 505) + 0 on 616;
-file . "adder_32.vhdl" "3f5dadcb3ab9a39ec2eb4897595fc776a5433a97" "20211020065114.541":
-  entity adder_32 at 1( 0) + 0 on 613;
-  architecture archi_adder_32 of adder_32 at 14( 257) + 0 on 614;
-file . "adder.vhdl" "aab2fe7bb73e1c1d1e86d6c66186fb6e45d5fee9" "20211020065114.525":
-  entity adder at 1( 0) + 0 on 611;
-  architecture archi_adder of adder at 12( 189) + 0 on 612;
-file . "adder_4.vhdl" "f1ab3ef4b47b3c66b61d6bc470b4c0fb0726bac2" "20211013094341.983":
-  entity adder_4 at 1( 0) + 0 on 31;
-  architecture archi_adder_4 of adder_4 at 16( 288) + 0 on 32;
-file . "adder_4_tb.vhdl" "f0a4cbc88d575004196d29bc9a0bf432fdb15116" "20211013094804.958":
-  entity adder_4_tb at 1( 0) + 0 on 37;
-  architecture behav of adder_4_tb at 9( 98) + 0 on 38;
-file . "adder_32_tb.vhdl" "631ed7636392312d0a2e1ec03026538b72e761a3" "20211013101702.812":
-  entity adder_32_tb at 1( 0) + 0 on 41;
-  architecture behav of adder_32_tb at 9( 99) + 0 on 42;
-file . "alu_tb.vhdl" "430f6e6e1e801a0cf0526d0530f2f7ed9c144401" "20211020065114.571":
-  entity alu_tb at 1( 0) + 0 on 617;
-  architecture behav of alu_tb at 9( 94) + 0 on 618;
+file . "exec.vhdl" "49646307eb6df2a55519278266a617d49b05b371" "20211023131902.118":
+  entity exec at 1( 0) + 0 on 853;
+  architecture behavior of exec at 79( 2272) + 0 on 854;
 file . "shifter_tb.vhdl" "ad90d4e63eb6e331ef64961244f049860e857184" "20211020094401.368":
   entity shifter_tb at 1( 0) + 0 on 763;
   architecture behav of shifter_tb at 9( 98) + 0 on 764;
+file . "alu_tb.vhdl" "430f6e6e1e801a0cf0526d0530f2f7ed9c144401" "20211020065114.571":
+  entity alu_tb at 1( 0) + 0 on 617;
+  architecture behav of alu_tb at 9( 94) + 0 on 618;
+file . "adder_32_tb.vhdl" "631ed7636392312d0a2e1ec03026538b72e761a3" "20211023151136.228":
+  entity adder_32_tb at 1( 0) + 0 on 861;
+  architecture behav of adder_32_tb at 9( 99) + 0 on 862;
+file . "adder_4_tb.vhdl" "f0a4cbc88d575004196d29bc9a0bf432fdb15116" "20211013094804.958":
+  entity adder_4_tb at 1( 0) + 0 on 37;
+  architecture behav of adder_4_tb at 9( 98) + 0 on 38;
+file . "adder_4.vhdl" "f1ab3ef4b47b3c66b61d6bc470b4c0fb0726bac2" "20211013094341.983":
+  entity adder_4 at 1( 0) + 0 on 31;
+  architecture archi_adder_4 of adder_4 at 16( 288) + 0 on 32;
+file . "adder.vhdl" "aab2fe7bb73e1c1d1e86d6c66186fb6e45d5fee9" "20211020065114.525":
+  entity adder at 1( 0) + 0 on 611;
+  architecture archi_adder of adder at 12( 189) + 0 on 612;
+file . "adder_32.vhdl" "28c520b7a84a949595b034a880d8b9b11ef56922" "20211023151136.212":
+  entity adder_32 at 1( 0) + 0 on 859;
+  architecture archi_adder_32 of adder_32 at 14( 257) + 0 on 860;
+file . "alu.vhdl" "fe6ed7067a04b1f5b501d79661c5ddf19ce16255" "20211023131902.067":
+  entity alu at 1( 0) + 0 on 847;
+  architecture archi_alu of alu at 20( 505) + 0 on 848;
+file . "shifter.vhdl" "77befadb5f64887ba55b9501b423c8673a783d4d" "20211023131902.082":
+  entity shifter at 1( 0) + 0 on 849;
+  architecture archi_shifter of shifter at 24( 824) + 0 on 850;
+file . "fifo.vhdl" "3a724fd211e700526e3348bb49440a22d430da92" "20211023131902.093":
+  entity fifo at 1( 0) + 0 on 851;
+  architecture dataflow of fifo at 24( 377) + 0 on 852;
+file . "reg.vhdl" "ae299eae6a253c08255540e962a317ba131615e6" "20211201092351.639":
+  entity reg at 1( 0) + 0 on 987;
+  architecture behavior of reg at 69( 1621) + 0 on 988;
+file . "reg_tb.vhdl" "d3990cbb657a30d690098a18dbacf7e4d788c54e" "20211201092351.664":
+  entity reg_tb at 1( 0) + 0 on 989;
+  architecture behav of reg_tb at 9( 94) + 0 on 990;
