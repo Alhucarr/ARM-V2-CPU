@@ -68,9 +68,8 @@ end Reg;
 
 architecture Behavior OF Reg is
 type regs is array (0 to 15) of std_logic_vector(31 downto 0);
-type validite is array (0 to 15) of std_logic;
+signal validite_registre : std_logic_vector(15 downto 0);
 signal registres : regs;
-signal validite_registre : validite;
 signal flags : std_logic_vector(0 to 3);
 begin
 process (ck)
@@ -82,7 +81,7 @@ if rising_edge(ck) then
 	-----------------------------------------------------
 
     if reset_n = '0' then
-        registres(15) <= (others => '0');
+        registres(15) <= x"0000";
 		validite_registre <= x"ffff";
     else
 		-------------------------------------------------

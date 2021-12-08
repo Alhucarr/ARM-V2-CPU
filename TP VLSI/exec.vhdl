@@ -216,7 +216,7 @@ exe_push <= (not dec2exe_empty)and(dec_mem_lw or dec_mem_lb or dec_mem_sw or dec
 exe_res <= res_alu;
 exe_pop <= (not dec2exe_empty)and(not exe2mem_full); 
 
-dec_exe_wb <= exe_wb;
-dec_flag_wb	<= exe_flag_wb;
+exe_wb <= dec_exe_wb;
+exe_flag_wb	<= dec_flag_wb;
 
 end Behavior;

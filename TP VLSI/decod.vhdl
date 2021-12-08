@@ -381,41 +381,58 @@ if(rising_edge(ck))then
 end if;
 end process;
 
-process(T1,T2,T3,T4,T5,T6)
+process(cond,condv,dec2if_full,dec2if_empty,dec2exe_full,bl_i,b_i,mtrans_t,if2dec_empty)
 begin
     case cur_state is
     when Fetch =>
-        if(T1 = '1') then
+        if dec2if_full = '1' then
             next_state <= Fetch;
-        elsif (T2 = '1') then
+        elsif dec2if_empty = '0' then
             next_state <= Run;
-        elsif (T3 = '1') then
-            next_state <= Branch;
         end if;
 
     when Run =>
-        if((T1 = '1')or(T2 = '1')or(T3 = '1')) then
-            next_state <= Fetch;
-        elsif(T4 = '1') then
+        if(if2dec_empty='1' or dec2exe_full=1' or condv ='0') then
+            next_state <= Run;
+			if(dec2if_full = '0')then
+				dec2if_push <= '1';
+			end if; 
+		elsif(cond = '0')then
+			dec2exe_push<='0';
+			if(dec2if_full = '0')then
+				dec2if_push <= '1';
+			end if; 
+			next_state <= Run;
+		elsif(cond = '1') then
+			dec2exe_push<='1';
+			if(dec2if_full = '0')then
+				dec2if_push <= '1';
+			end if; 
+			next_state <= Run;
+        elsif(bl_i = '1') then
             next_state <= Link;
-        elsif(T5 = '1') then
+        elsif(b_i = '1') then
             next_state <= Branch;
-        elsif(T6 = '1') then
+        elsif(mtrans_t = '1') then
             next_state <= Mtrans;
         end if;
     
     when Link =>
-        if(T1 = '1') then
             next_state <= Branch;
-        end if;
+			dec2exe_push <='1';
 
     when Branch =>
-        if(T1 = '1') then
+        if(if2dec_empty = '1') then
             next_state <= Branch;
-        elsif (T2 = '1') then
+			dec2exe_push <= '0';
+			if2dec_pop <= '0';			
+        else
             next_state <= Run;
-        elsif (T3 = '1') then
-            next_state <= Fetch;
+			if(dec2if_full = '0')then
+				dec2if_push <= '1';
+			end if; 
+			dec2exe_push<='1';
+			if2dec_pop <= '1';
         end if;
 
     when Mtrans =>
@@ -423,6 +440,9 @@ begin
             next_state <= Mtrans;
         elsif (T2 = '1') then
             next_state <= Run;
+			if(dec2if_full = '0')then
+				dec2if_push <= '1';
+			end if; 
         elsif (T3 = '1') then
             next_state <= Branch;
         end if;

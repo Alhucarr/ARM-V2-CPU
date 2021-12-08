@@ -19,20 +19,21 @@ end alu;
 
 architecture archi_alu of alu is
 signal a,b,s,s_a : std_logic_vector(31 downto 0);
-signal Cin_s,Cout_s : std_logic;
+signal c: std_logic_vector (32 downto 0);
 begin
-	FA: entity work.adder_32
-	port map (a, b, Cin_S, S_a, Cout_S);
 
+c(0) <= cin;
 a <= op1;
 b <= op2;
-Cin_s <= Cin;
 res<=s;
-cout <= cout_s;
+cout <= c(32);
+
+c(32 downto 1) <= (a(31 downto 0) and (b(31 downto 0) xor c(31 downto 0))) or (b(31 downto 0) and c(31 downto 0));
+s_a(31 downto 0) <= (not(a(31 downto 0)) and (b(31 downto 0) xor c(31 downto 0))) or a(31 downto 0);
+
 s <= a and b when cmd = "01" else s_a when cmd = "00" else a or b when cmd = "10" else a xor b when cmd = "11" else x"00000000";
 z <= '1' when s = x"00000000" else '0';
-v <= '1' when cout_s = '1' else '0';
+v <= '1' when c(32) = '1' else '0';
 n <= '1' when s(31)='1' else '0';
-
 end archi_alu;
 
